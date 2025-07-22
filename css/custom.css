@@ -1,0 +1,1318 @@
+/* Colores clave */
+:root {
+    --primary-pink: #d9408b; /* El fucsia/rosa de tu diseño */
+    --text-dark: #333333; /* Un negro/gris oscuro para títulos y texto */
+    --light-grey-bg: #f8f9fa; /* Fondo ligeramente gris para secciones */
+    --white-bg: #ffffff;
+    --border-grey: #e0e0e0; /* Gris para bordes de formularios y FAQ */
+    --button-grey: #b0b0b0; /* Gris para botones de 'VER PRODUCTOS' */
+    --section-padding-vertical: 60px; /* Espaciado vertical estándar para las secciones */
+    --section-margin-bottom: 20px; /* Espacio entre secciones */
+    --border-radius: 20px; /* Radio para los contornos curvos */
+    --section-separator-margin: 30px; /* Margen para separación de secciones */
+}
+
+/* Tipografía global */
+body {
+    font-family: 'Montserrat', sans-serif; /* Para texto general y menú */
+    color: var(--text-dark);
+    background-color: var(--light-grey-bg); /* Fondo general del body */
+    font-weight: 400;
+}
+
+
+/* Títulos principales (H1, H2, H3) - Usa Playfair Display para un toque elegante */
+.hero-title,
+.section-title,
+.section-title2,
+.quote-title,
+.service-content h5,
+.testimonial-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* Negrita */
+    color: var(--text-dark);
+}
+
+/* Estilos de títulos específicos */
+.hero-title {
+    font-size: 4rem; /* Ajusta según sea necesario */
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--pink-brand); /* o color: #e83e8c; */
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .value-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--pink-brand); /* o color: #e83e8c; */
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  /* Si quieres también hacer uniforme los párrafos dentro de tarjetas */
+  .value-desc {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+
+  .btn-cotiza {
+    background-color: #e83e8c; /* o reemplaza con #f54291 si no usas variables */
+    color: white; /* <--- corregido aquí */
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+  }
+
+  .btn-cotiza:hover {
+    background-color: #490126; /* morado oscuro al pasar el cursor */
+    color: white; /* <--- asegúrate que el texto sigue blanco */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.5);
+    text-decoration: none;
+  }
+
+
+
+  /* Ajusta si hay conflicto con <h5> usados como título */
+  .service-card h5 {
+    font-size: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--pink-brand); /* o color: #e83e8c; */
+    text-align: center;
+  }
+
+.quote-title {
+    font-size: 3.2rem;
+    color: var(--primary-pink); /* El título de cotización es rosa */
+}
+
+.quote-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+
+/* Navbar global */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente por defecto (para index) */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil para la navbar */
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Más opaco al hacer scroll o en otras páginas */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #fff !important; /* Asegura que el logo sea blanco */
+    /* font-family: 'Montserrat', sans-serif; Si quieres una fuente específica para el logo */
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important; /* Enlaces blancos */
+    margin-right: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-pink) !important; /* Color de acento al hover/activo */
+}
+
+/* Hero Section (Solo para index.html) */
+.hero-section {
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Overlay para contraste */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.custom-btn-cotizar {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn-cotizar:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    border-color: #fff;
+}
+
+.hero-section .hero-title,
+.hero-section .hero-subtitle {
+    color: #fff !important;
+}
+
+
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1050; /* Por encima de todo */
+    background-color: #25D366; /* Color oficial de WhatsApp */
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.05);
+}
+
+.whatsapp-float img {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: 30px;
+}
+
+.whatsapp-float span {
+    font-size: 1.1rem;
+    margin-left: 8px;
+    color: #fff;
+}
+
+/* General Sections Padding */
+section {
+    padding: 80px 0; /* Espaciado uniforme para todas las secciones */
+}
+
+/* Variables CSS */
+
+/* === Sección de Servicios (estructura general) === */
+/* Sección Servicios */
+#servicios-content {
+    padding-top: 100px; /* Ya lo tenías, ajustado a 100px */
+    background-color: var(--white-bg);
+    color: var(--text-dark);
+}
+
+
+
+/* === Tarjeta horizontal de servicio === */
+.service-horizontal-card {
+    display: flex;
+    flex-direction: row; /* Por defecto en escritorio */
+    background-color: var(--white-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    height: 150px; /* ¡Altura fija para las tarjetas horizontales: 150px! */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-horizontal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(217, 64, 139, 0.15);
+}
+
+.service-horizontal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0; /* Bootstrap ya maneja los bordes redondeados en la tarjeta padre */
+}
+
+/* Contenedor de la imagen (col-md-5) */
+.service-horizontal-card .col-md-5 {
+    height: 100%; /* Asegura que la imagen ocupe toda la altura de la tarjeta */
+    overflow: hidden;
+}
+
+/* Contenedor del texto (col-md-7) */
+.service-horizontal-card .col-md-7 {
+    display: flex; /* Convierte el contenedor en un flex container */
+    flex-direction: column; /* Apila los elementos hijos (h3 y p) verticalmente */
+    justify-content: center; /* ¡Esta es la clave! Centra el bloque de texto verticalmente */
+    align-items: flex-start; /* Alinea los hijos a la izquierda horizontalmente */
+    height: 50%; /* ¡IMPORTANTE: Debe ser 100% para que justify-content funcione correctamente! */
+    padding: 1rem 1.5rem; /* Ajustado el padding para que quepa bien el texto en 150px de altura */
+}
+
+
+/* Título dentro de cada tarjeta */
+.service-horizontal-card .value-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem; /* Reducido un poco para 150px de altura */
+    color: var(--primary-pink);
+    margin-bottom: 0.5rem; /* Margen inferior ajustado */
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+/* Párrafo dentro de cada tarjeta */
+.service-horizontal-card .value-desc {
+    font-size: 0.85rem; /* Reducido para 150px de altura */
+    color: var(--text-dark);
+    text-align: left; /* Alinea la descripción a la izquierda */
+    line-height: 1.4; /* Espaciado de línea más compacto */
+    margin-bottom: 0;
+    /* max-width: 90%; REMOVED - Esto puede causar problemas de justificación con 'left' */
+}
+
+/* Responsivo para las tarjetas de servicio */
+@media (max-width: 767.98px) {
+    .service-horizontal-card {
+        flex-direction: column; /* Apila imagen y texto en móviles */
+        height: auto; /* Altura automática en móviles */
+    }
+
+    .service-horizontal-card img {
+        border-radius: 12px 12px 0 0; /* Arriba redondeado, abajo recto */
+        height: 120px; /* Altura de la imagen reducida para móviles */
+    }
+
+    .service-horizontal-card .col-md-5,
+    .service-horizontal-card .col-md-7 {
+        width: 100%;
+        height: auto;
+        padding: 0.8rem 1rem; /* Menos padding en móviles */
+        align-items: flex-start; /* Mantener alineación a la izquierda en móvil */
+    }
+
+    .service-horizontal-card .value-title {
+        font-size: 1.1rem; /* Ajuste para móviles */
+        text-align: left;
+    }
+
+    .service-horizontal-card .value-desc {
+        font-size: 0.8rem; /* Ajuste para móviles */
+        text-align: left;
+    }
+}
+
+/* Responsive para pantallas extra-pequeñas si es necesario */
+@media (max-width: 575.98px) {
+    .service-horizontal-card .value-title {
+        font-size: 1rem;
+    }
+    .service-horizontal-card .value-desc {
+        font-size: 0.75rem;
+    }
+}
+
+/* --- Nuevos estilos para las Categorías Principales (Tarjetas con enlace) --- */
+#categorias-principales {
+    padding-top: var(--section-padding-vertical);
+    padding-bottom: var(--section-padding-vertical);
+    margin-bottom: var(--section-margin-bottom);
+    background-color: var(--white-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.category-card-link {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    display: block; /* Para que la tarjeta sea clickeable por completo */
+}
+
+.category-card {
+    background-color: var(--white-bg);
+    border: 1px solid var(--border-grey);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+    display: flex; /* <== aquí estaba mal con 'lay' */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(217, 64, 139, 0.3);
+    border-color: var(--primary-pink);
+}
+
+.category-icon {
+    font-size: 3.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+    color: var(--primary-pink); /* Asegura que el ícono siga siendo rosa al hover */
+}
+
+.category-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+}
+
+.category-card:hover .category-title {
+    color: var(--text-dark); /* Asegura que el título siga siendo oscuro al hover */
+}
+
+.category-description {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.service-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(217, 64, 139, 0.15);
+  }
+
+  .image-mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .mosaic-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .mosaic-item-lg {
+    grid-column: span 2;
+  }
+
+
+
+
+
+
+/* Responsive para las nuevas secciones */
+@media (max-width: 991.98px) {
+    .service-list-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .service-item-detail {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
+    .category-title {
+        font-size: 1.4rem;
+    }
+    .category-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .service-list-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+    .service-item-detail {
+        justify-content: center; /* Centra el texto en móviles */
+    }
+    .category-card {
+        padding: 1.5rem;
+    }
+    .category-icon {
+        font-size: 3rem;
+    }
+    .category-title {
+        font-size: 1.2rem;
+    }
+}
+
+.service-card {
+    background-color: var(--white-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(217, 64, 139, 0.15);
+  }
+
+  .service-content p {
+    color: var(--text-dark);
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+
+
+
+
+
+/* Eslogan */
+.slogan-about {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    font-style: italic;
+    margin: 0 auto 1.5rem;
+    text-align: center !important;
+    line-height: 1.4;
+    max-width: 800px;
+}
+
+/* Introducción */
+.intro-text {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.intro-text2 {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-align: center !important;
+    line-height: 1.6;
+}
+
+/* Justificación general para párrafos y listas */
+#nosotros-content p,
+#nosotros-content ul,
+#nosotros-content li,
+#nosotros-content .history-text,
+#nosotros-content .logo-description,
+#nosotros-content .logo-description-combined,
+#ubicacion .fs-5,
+.client-name { /* Añadido .client-name */
+    text-align: justify;
+}
+
+/* === ESTILOS DE SECCIÓN CON CONTORNOS CURVOS Y ESPACIADO === */
+/* Contenedor principal de la sección "Sobre Nosotros" (introducción) */
+#nosotros-content > .container.pt-5.mt-5 {
+    padding-top: var(--section-padding-vertical);
+    padding-bottom: var(--section-padding-vertical);
+    margin-bottom: var(--section-margin-bottom);
+    background-color: var(--white-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+#nosotros-content > .container.pt-5.mt-5 > .text-center > * {
+    text-align: center;
+}
+
+/* Sección de Misión y Visión */
+#nosotros-content .row.equal-height.mb-5.justify-content-center {
+    padding-top: var(--section-padding-vertical);
+    padding-bottom: var(--section-padding-vertical);
+    margin-bottom: calc(var(--section-margin-bottom) * 2);
+    background-color: var(--white-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para todas las secciones principales */
+#nosotros-content section {
+    padding-top: var(--section-padding-vertical);
+    padding-bottom: var(--section-padding-vertical);
+    margin-bottom: var(--section-margin-bottom);
+    background-color: var(--white-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Asegurar que el título dentro de cada sección esté centrado */
+#nosotros-content section > .section-title,
+#nosotros-content > .container.pt-5.mt-5 > .text-center > .section-title,
+#ubicacion .section-title2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+/* === TARJETAS DE MISIÓN Y VISIÓN IGUALADAS === */
+.row.equal-height {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.row.equal-height > .vision-mision-card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white-bg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
+}
+
+.vision-mision-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(217, 64, 139, 0.3);
+}
+
+.vision-mision-card h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-pink);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.vision-mision-card p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* --- SECCIÓN DE VALORES COMO TARJETAS --- */
+.valores-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.value-item {
+    flex: 0 0 calc(33.333% - 2rem);
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white-bg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.value-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(217, 64, 139, 0.3);
+}
+
+.values-icon {
+    font-size: 2.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 0.5rem;
+}
+
+.value-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--pink-brand); /* o color: #e83e8c; */
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  /* Si quieres también hacer uniforme los párrafos dentro de tarjetas */
+  .value-desc {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+  }
+
+.history-logo-section .history-text {
+    max-width: 900px;
+    margin: 0 auto 1rem auto;
+    font-size: 1rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.history-logo-section .combined-logo-img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0rem auto;
+}
+
+.history-logo-section .logo-description-combined {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+/* --- NUEVOS ESTILOS PARA LA SECCIÓN DE CLIENTES --- */
+.clients-section {
+    /* Aplicamos un margen superior más grande para una clara separación */
+    margin-top: var(--section-separator-margin); /* Usamos la nueva variable */
+    /* Puedes añadir un borde superior o un color de fondo diferente si quieres una separación más drástica */
+    /* border-top: 2px solid var(--primary-pink); */ /* Ejemplo de borde */
+    /* background-color: #f0f0f0; */ /* Ejemplo de color de fondo diferente */
+}
+
+.clients-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 0 15px;
+}
+
+.client-card {
+    background-color: var(--white-bg);
+    border: 1px solid #eee;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 0 0 calc(25% - 1.5rem);
+    max-width: 250px;
+    min-height: 150px;
+    justify-content: center;
+}
+
+.client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo {
+    max-width: 100px;
+    max-height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+}
+
+.client-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.3;
+    text-align: center;
+}
+
+.clients-list {
+    display: none; /* Oculta la lista antigua */
+}
+
+
+/* === UBICACIÓN === */
+#ubicacion {
+    background-color: var(--white-bg);
+}
+
+#ubicacion .container {
+    padding: var(--section-padding-vertical) 15px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 1199.98px) {
+    .value-item {
+        flex: 0 0 calc(50% - 2rem);
+        max-width: 400px;
+    }
+    .client-card {
+        flex: 0 0 calc(33.333% - 1.5rem); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .slogan-about {
+        font-size: 1.5rem;
+    }
+    .intro-text,
+    .history-text,
+    .logo-description,
+    #ubicacion .fs-5,
+    .history-logo-section .logo-description-combined {
+        font-size: 0.9rem;
+    }
+    .value-item {
+        max-width: 350px;
+        flex: 0 0 calc(50% - 2rem);
+    }
+    .values-icon {
+        font-size: 2rem;
+    }
+    .value-title {
+        font-size: 1.2rem;
+    }
+    .vision-mision-card {
+        max-width: 500px;
+    }
+    #nosotros-content section > .section-title,
+    #nosotros-content > .container.pt-5.mt-5 > .text-center > .section-title,
+    #ubicacion .section-title2 {
+        font-size: 2rem;
+    }
+    .history-logo-section .combined-logo-img {
+        max-width: 150px;
+    }
+    .client-card {
+        flex: 0 0 calc(50% - 1.5rem); /* 2 columnas en tablets */
+        max-width: 280px;
+    }
+    .client-name {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .slogan-about {
+        font-size: 1.3rem;
+    }
+    .intro-text,
+    .history-text,
+    .logo-description,
+    #ubicacion .fs-5,
+    .history-logo-section .logo-description-combined {
+        font-size: 0.85rem;
+    }
+    .value-item {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .values-icon {
+        font-size: 1.8rem;
+    }
+    .value-title {
+        font-size: 1rem;
+    }
+    .vision-mision-card {
+        max-width: 100%;
+    }
+    #nosotros-content section > .section-title,
+    #nosotros-content > .container.pt-5.mt-5 > .text-center > .section-title,
+    #ubicacion .section-title2 {
+        font-size: 1.8rem;
+    }
+    .history-logo-section .combined-logo-img {
+        max-width: 120px;
+        margin-bottom: 1.5rem;
+    }
+    .client-card {
+        flex: 0 0 calc(100% - 1.5rem); /* 1 columna en móviles */
+        max-width: 350px;
+    }
+    .client-logo {
+        max-width: 80px;
+        max-height: 60px;
+    }
+    .client-name {
+        font-size: 0.85rem;
+    }
+}
+
+/* Nuevo estilo para el título de descripción de servicios */
+.section-title2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; /* Tamaño un poco más pequeño que section-title */
+    font-weight: 700; /* Negrita */
+    color: var(--primary-pink); /* Color rosa */
+    margin-bottom: 2rem;
+}
+
+/* Sección de Descripción y Atributos */
+.service-description-section {
+    background-color: var(--white-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem; /* Ajuste el padding para un mejor look */
+    margin-bottom: 3rem; /* Espacio debajo de la sección */
+}
+
+.description-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.attributes-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.attributes-list {
+    list-style: none; /* Quitar el bullet por defecto */
+    padding-left: 0;
+}
+
+.attributes-list li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.attributes-list li i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-top: 4px; /* Para alinear el ícono con el texto */
+    color: var(--primary-pink); /* Color del ícono */
+}
+
+/* Mosaico de Imágenes */
+.image-mosaic-section {
+    background-color: var(--white-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    margin-top: var(--section-margin-bottom); /* Espacio superior */
+    margin-bottom: 3rem;
+}
+
+.image-mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas responsivas */
+    grid-auto-rows: minmax(150px, auto); /* Altura mínima de fila */
+    gap: 15px; /* Espacio entre imágenes */
+}
+
+.mosaic-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para que llene el contenedor */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.mosaic-item:hover img {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Para la imagen grande */
+.mosaic-item-lg {
+    grid-column: span 2; /* Ocupa 2 columnas */
+    grid-row: span 2;    /* Ocupa 2 filas (si el diseño lo permite) */
+    min-height: 400px; /* Asegura un tamaño mínimo para la imagen grande */
+}
+
+/* Responsive para el mosaico */
+@media (min-width: 992px) { /* En pantallas grandes (desktop) */
+    .image-mosaic-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para un diseño más denso */
+        grid-auto-rows: 200px; /* Altura de fila fija para un mejor grid */
+    }
+    .mosaic-item-lg {
+        grid-column: span 2; /* 2 columnas */
+        grid-row: span 2;    /* 2 filas */
+    }
+     /* Ajustes específicos para los items para que el mosaico se vea bien */
+    .image-mosaic-grid > div:nth-child(2) { grid-column: span 1; grid-row: span 1; }
+    .image-mosaic-grid > div:nth-child(3) { grid-column: span 1; grid-row: span 1; }
+    .image-mosaic-grid > div:nth-child(4) { grid-column: span 1; grid-row: span 1; }
+    .image-mosaic-grid > div:nth-child(5) { grid-column: span 1; grid-row: span 1; }
+    .image-mosaic-grid > div:nth-child(6) { grid-column: span 1; grid-row: span 1; }
+    .image-mosaic-grid > div:nth-child(7) { grid-column: span 1; grid-row: span 1; } /* Añadido para img6.jpg */
+}
+
+@media (max-width: 768px) { /* Tablets y móviles */
+    .image-mosaic-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Más flexible */
+        grid-auto-rows: auto; /* Altura automática */
+    }
+    .mosaic-item-lg {
+        grid-column: span 1; /* En móviles, la imagen grande ocupa solo 1 columna */
+        grid-row: span 1;
+        min-height: 250px;
+    }
+    .section-title2 {
+        font-size: 1.7rem;
+    }
+    .description-text,
+    .attributes-list li {
+        font-size: 0.95rem;
+    }
+    .attributes-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) { /* Móviles muy pequeños */
+    .image-mosaic-grid {
+        grid-template-columns: 1fr; /* Una columna por imagen */
+    }
+}
+
+
+
+
+#clientes-content {
+    padding-top: 150px;
+    background-color: var(--white-bg);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+.testimonial-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+}
+
+.testimonial-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.testimonial-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    flex-grow: 1;
+    font-style: italic;
+}
+
+/* Carrusel - flechas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0.5);
+    width: 2rem;
+    height: 2rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+
+
+#faq-content {
+    padding-top: 150px;
+    background-color: var(--white-bg);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-pink);
+}
+
+.faq-item {
+    border: none;
+    border-bottom: 1px solid var(--border-grey);
+    margin-bottom: 0;
+    background-color: var(--white-bg);
+}
+
+.faq-button {
+    background-color: transparent !important;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    padding: 1rem 1.25rem;
+    transition: background-color 0.2s ease;
+    border-radius: 6px;
+}
+
+.faq-button:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.faq-button:not(.collapsed) {
+    color: var(--primary-pink);
+    background-color: rgba(255, 192, 203, 0.08); /* Rosa pálido al expandirse */
+}
+
+.accordion-button::after {
+    filter: invert(0.5);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg);
+}
+
+.faq-body {
+    padding: 1rem 1.25rem 1.5rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Quote Section (CAP4.jpg) */
+#cotiza-content {
+    padding-top: 150px; /* Ajuste para el contenido de la primera sección en otras páginas */
+}
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+.contact-info p strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.quote-form .quote-input {
+    border: none;
+    border-bottom: 1px solid var(--border-grey); /* Línea inferior como en la imagen */
+    border-radius: 0; /* Sin bordes redondeados */
+    padding: 12px 0; /* Más padding vertical */
+    box-shadow: none; /* Elimina sombra de focus */
+    font-size: 1.1rem;
+    background-color: transparent; /* Asegura que el fondo sea transparente */
+}
+
+.quote-form .quote-input::placeholder {
+    color: #a0a0a0; /* Color del placeholder */
+}
+
+.quote-form .quote-input:focus {
+    border-color: var(--primary-pink); /* Borde rosa al enfocar */
+    outline: 0;
+}
+
+.custom-btn-quote-now {
+    background-color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    color: #fff;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 8px; /* Ligeramente redondeado */
+    transition: background-color 0.3s ease;
+}
+
+.custom-btn-quote-now:hover {
+    background-color: darken(var(--primary-pink), 10%); /* Oscurece al hover */
+    border-color: darken(var(--primary-pink), 10%);
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centra los iconos si la columna es estrecha */
+    gap: 20px; /* Espacio entre iconos */
+}
+
+.social-icons .social-icon {
+    font-size: 1.8rem;
+    color: var(--primary-pink); /* Iconos de redes sociales en rosa */
+    transition: color 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+    color: darken(var(--primary-pink), 15%);
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-dark); /* Fondo oscuro */
+    color: #ccc;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-pink);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 991.98px) { /* Tablet y móvil */
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+        text-align: center; /* Centra títulos en móvil */
+    }
+    .lead, .custom-btn-products {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Para centrar el botón */
+    }
+    .whatsapp-float span {
+        display: none; /* Oculta el texto "¡Hola!" en móviles pequeños */
+    }
+    .about-logo {
+        max-width: 180px;
+    }
+    .quote-title, .quote-subtitle, .contact-info, .social-icons {
+        text-align: center !important; /* Centra el texto y los iconos en móvil */
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) { /* Móvil */
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        min-height: 70vh;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .navbar-toggler {
+        margin-left: auto; /* Empuja el botón hamburguesa a la derecha */
+    }
+    .navbar-collapse {
+        text-align: center; /* Centra los elementos del menú en móvil */
+    }
+    .testimonial-card {
+        min-height: auto; /* Permite que la altura se ajuste en móvil */
+    }
+    .service-card img {
+        height: 180px; /* Ajuste para móviles */
+    }
+}
