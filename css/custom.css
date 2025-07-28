@@ -137,7 +137,9 @@ body {
 .navbar-brand {
     font-weight: 700;
     color: #fff !important; /* Asegura que el logo sea blanco */
-    /* font-family: 'Montserrat', sans-serif; Si quieres una fuente específica para el logo */
+    /* INICIO DE CAMBIO: Cambiar la fuente del logo/nombre de la marca */
+    font-family: 'Playfair Display', serif; /* Usar Playfair Display para el logo */
+    /* FIN DE CAMBIO */
 }
 
 .navbar-nav .nav-link {
@@ -821,97 +823,79 @@ section {
     }
 }
 
-@media (max-width: 991.98px) {
-    .section-title {
-        font-size: 2rem;
+@media (max-width: 991.98px) { /* Tablet y móvil */
+    .hero-title {
+        font-size: 3rem;
     }
-    .slogan-about {
-        font-size: 1.5rem;
-    }
-    .intro-text,
-    .history-text,
-    .logo-description,
-    #ubicacion .fs-5,
-    .history-logo-section .logo-description-combined {
-        font-size: 0.9rem;
-    }
-    .value-item {
-        max-width: 350px;
-        flex: 0 0 calc(50% - 2rem);
-    }
-    .values-icon {
-        font-size: 2rem;
-    }
-    .value-title {
+    .hero-subtitle {
         font-size: 1.2rem;
     }
-    .vision-mision-card {
-        max-width: 500px;
+    .section-title {
+        font-size: 2.2rem;
+        text-align: center; /* Centra títulos en móvil */
     }
-    #nosotros-content section > .section-title,
-    #nosotros-content > .container.pt-5.mt-5 > .text-center > .section-title,
-    #ubicacion .section-title2 {
-        font-size: 2rem;
+    .lead, .custom-btn-products {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Para centrar el botón */
     }
-    .history-logo-section .combined-logo-img {
-        max-width: 150px;
+    .whatsapp-float span {
+        display: none; /* Oculta el texto "¡Hola!" en móviles pequeños */
     }
-    .client-card {
-        flex: 0 0 calc(50% - 1.5rem); /* 2 columnas en tablets */
-        max-width: 280px;
+    .about-logo {
+        max-width: 180px;
     }
-    .client-name {
-        font-size: 0.9rem;
+    .quote-title, .quote-subtitle, .contact-info, .social-icons {
+        text-align: center !important; /* Centra el texto y los iconos en móvil */
     }
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* INICIO DE CAMBIO: Centrar los nav-links en pantallas medianas */
+    .navbar-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Apila los elementos */
+        align-items: center;   /* Centra horizontalmente */
+    }
+    .navbar-nav .nav-item {
+        margin: 0.5rem 0; /* Espaciado entre elementos de la lista */
+    }
+    /* FIN DE CAMBIO */
 }
 
-@media (max-width: 767.98px) {
-    .section-title {
-        font-size: 1.8rem;
+@media (max-width: 767.98px) { /* Móvil */
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        min-height: 70vh;
     }
-    .slogan-about {
-        font-size: 1.3rem;
+    .hero-title {
+        font-size: 2.5rem;
     }
-    .intro-text,
-    .history-text,
-    .logo-description,
-    #ubicacion .fs-5,
-    .history-logo-section .logo-description-combined {
-        font-size: 0.85rem;
-    }
-    .value-item {
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
-    .values-icon {
-        font-size: 1.8rem;
-    }
-    .value-title {
+    .hero-subtitle {
         font-size: 1rem;
     }
-    .vision-mision-card {
-        max-width: 100%;
+    .navbar-toggler {
+        margin-left: auto; /* Empuja el botón hamburguesa a la derecha */
     }
-    #nosotros-content section > .section-title,
-    #nosotros-content > .container.pt-5.mt-5 > .text-center > .section-title,
-    #ubicacion .section-title2 {
-        font-size: 1.8rem;
+    .navbar-collapse {
+        text-align: center; /* Centra los elementos del menú en móvil */
     }
-    .history-logo-section .combined-logo-img {
-        max-width: 120px;
-        margin-bottom: 1.5rem;
+    .testimonial-card {
+        min-height: auto; /* Permite que la altura se ajuste en móvil */
     }
-    .client-card {
-        flex: 0 0 calc(100% - 1.5rem); /* 1 columna en móviles */
-        max-width: 350px;
+    .service-card img {
+        height: 180px; /* Ajuste para móviles */
     }
-    .client-logo {
-        max-width: 80px;
-        max-height: 60px;
+
+    /* INICIO DE CAMBIO: Asegurar centrado en móviles más pequeños */
+    .navbar-nav {
+        align-items: center; /* Asegura el centrado de los ítems de navegación */
     }
-    .client-name {
-        font-size: 0.85rem;
-    }
+    /* FIN DE CAMBIO */
 }
 
 /* Nuevo estilo para el título de descripción de servicios */
