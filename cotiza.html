@@ -152,30 +152,24 @@
   </footer>
 
  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
-
-<script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Inicializa Flatpickr en el campo con el id 'fechaEvento'
-        flatpickr("#fechaEvento", {
-            dateFormat: "Y-m-d", // Formato de fecha (Año-Mes-Día)
-            locale: "es", // Establece el idioma a español
-            // Otras opciones útiles:
-            // minDate: "today", // Impide seleccionar fechas pasadas
-            // altInput: true, // Muestra una fecha amigable en el input, pero guarda el formato 'Y-m-d' real
-            // altFormat: "F j, Y" // Formato amigable: 'Julio 28, 2025'
-        });
+      // Inicializa Flatpickr en el campo con el id 'fechaEvento'
+      flatpickr("#fechaEvento", {
+          dateFormat: "Y-m-d", // Formato de fecha (Año-Mes-Día)
+          locale: "es", // Establece el idioma a español
+          // Puedes añadir más opciones aquí si las necesitas, por ejemplo:
+          // minDate: "today", // Impide seleccionar fechas pasadas
+      });
 
-        // Tu script existente para la navbar
-        document.getElementById('mainNavbar').classList.add('scrolled');
+      // Tu script existente para la navbar
+      document.getElementById('mainNavbar').classList.add('scrolled');
     });
-</script>
-</body>
-</html>
+  </script>
 
 </body>
 
