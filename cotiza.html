@@ -159,12 +159,12 @@
     document.addEventListener('DOMContentLoaded', function () {
         // Inicializa Flatpickr en el campo con el id 'fechaEvento'
         flatpickr("#fechaEvento", {
-    dateFormat: "Y-m-d",       // Formato interno que Flatpickr usará para guardar la fecha
-    locale: "es",              // Idioma del calendario
-    altInput: true,            // ACTIVA un campo de entrada alternativo para mostrar texto
-    altFormat: "d \\de F \\de Y", // Define el formato legible que se mostrará (ej. "28 de Julio de 2025")
-    // minDate: "today"          // (Opcional) Si quieres que no se puedan seleccionar fechas pasadas
-});
+            dateFormat: "Y-m-d",       // Formato interno que Flatpickr usará para guardar la fecha
+            locale: "es",              // Idioma del calendario
+            altInput: true,            // ACTIVA un campo de entrada alternativo para mostrar texto
+            altFormat: "d \\de F \\de Y", // Define el formato legible que se mostrará (ej. "28 de Julio de 2025")
+            // minDate: "today"          // (Opcional) Si quieres que no se puedan seleccionar fechas pasadas
+        });
 
         // ... tu otro script de la navbar ...
     });
