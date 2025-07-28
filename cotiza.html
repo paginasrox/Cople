@@ -155,21 +155,20 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
 
-  <script>
-    
-flatpickr("#fechaEvento", {
-    dateFormat: "Y-m-d", // Formato interno que se guardará (ej. 2025-07-28)
-    locale: "es",      // Establece el idioma a español
-    allowInput: true,  // Permite escribir directamente en el campo (aunque no es lo que buscas para el placeholder)
-    
-    // ESTAS SON LAS CLAVES PARA MOSTRAR UN FORMATO AMIGABLE
-    altInput: true,    // Crea un input alternativo para mostrar la fecha formateada
-    altFormat: "d \\de F \\de Y", // Formato que se mostrará en el campo (ej. 28 de Julio de 2025)
-    
-    // Si quieres un placeholder específico, asegúrate de que esté en tu HTML y no se sobrescriba.
-    // El placeholder del HTML <input placeholder="Selecciona la fecha del evento"> debería funcionar con altInput.
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Inicializa Flatpickr en el campo con el id 'fechaEvento'
+        flatpickr("#fechaEvento", {
+    dateFormat: "Y-m-d",       // Formato interno que Flatpickr usará para guardar la fecha
+    locale: "es",              // Idioma del calendario
+    altInput: true,            // ACTIVA un campo de entrada alternativo para mostrar texto
+    altFormat: "d \\de F \\de Y", // Define el formato legible que se mostrará (ej. "28 de Julio de 2025")
+    // minDate: "today"          // (Opcional) Si quieres que no se puedan seleccionar fechas pasadas
 });
-  </script>
+
+        // ... tu otro script de la navbar ...
+    });
+</script>
 
 </body>
 
